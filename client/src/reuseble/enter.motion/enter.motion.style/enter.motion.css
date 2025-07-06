@@ -1,0 +1,18 @@
+.motionBackground{
+    width: 100vw;
+    height: 100vh;
+    background-color: orange;
+}
+
+.motionText {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.motionText h1 {
+    color: white;
+    font-size: 150px;
+}
