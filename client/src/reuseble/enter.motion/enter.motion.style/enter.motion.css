@@ -1,7 +1,9 @@
 .motionBackground{
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: orange;
+    background-color: #FF6404;
+    z-index: 999;
 }
 
 .motionText {
@@ -14,5 +16,5 @@
 
 .motionText h1 {
     color: white;
-    font-size: 150px;
+    font-size: clamp(40px, 10vw, 200px);
 }

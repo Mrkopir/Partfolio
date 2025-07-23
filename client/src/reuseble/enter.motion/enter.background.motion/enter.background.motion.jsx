@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import EnterTextMotion from "./../enter.text.motion/enter.text.motion"
 
-export default function EnterBackgroundMotion () {
+export default function EnterBackgroundMotion ({text}) {
     const [showBackground, setShowBackground] = useState(true)
 
     useEffect(() => {
@@ -17,9 +17,9 @@ export default function EnterBackgroundMotion () {
                     className="motionBackground"
                     initial = {{y: "0%", opacity: 1}}
                     exit={{y: "-100%", opacity: 0}}
-                    transition={{duration: 0.8}}
+                    transition={{duration: 0.9}}
                 >
-                <EnterTextMotion />
+                <EnterTextMotion text = {text} />
                 </motion.div>
             )}
         </AnimatePresence>

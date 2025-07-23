@@ -1,0 +1,205 @@
+/* === Основний стиль === */
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6404;
+  padding: 20px 60px;
+  z-index: 10;
+  position: relative;
+}
+
+.Navigation p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.Navigation p a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.Navigation p:hover {
+  transform: scale(1.1);
+}
+
+.Right-Side {
+  display: flex;
+  gap: 80px;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 20px;
+}
+
+.nav-icon div {
+  background-color: black;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.line1 { top: 0; }
+.line2 { top: 10px; }
+.line3 { top: 20px; }
+
+.nav-icon.open .line1 {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.nav-icon.open .line2 {
+  opacity: 0;
+}
+
+.nav-icon.open .line3 {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+
+@media (max-width: 426px) {
+  .HiddenBurger {
+    display: block;
+  }
+
+  .Right-Side p {
+    display: none;
+  }
+
+  .PhoneMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FF6404;
+    z-index: 20;
+    padding-top: 100px;
+    box-sizing: border-box;
+  }
+
+  .PhoneMenu.menu-items.active {
+    display: block;
+  }
+
+  .PhoneMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .PhoneMenu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .PhoneMenu a {
+    font-size: 25px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s;
+  }
+
+  .PhoneMenu a:hover {
+    transform: scale(1.1);
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+  }
+  .CloseButton {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+        z-index: 21;
+        transition: transform 0.2s;
+    }
+
+    .CloseButton:hover {
+        transform: scale(1.2);
+    }
+
+}
+
+
+@media (min-width: 426px) {
+  .HiddenBurger,
+  .PhoneMenu,
+  .Overlay {
+    display: none !important;
+  }
+
+  .Right-Side p {
+    display: block;
+  }
+}
+
+@media (min-width: 2560px) {
+  .Navigation p a {
+    font-size: 70px;
+  }
+
+  .Right-Side {
+    gap: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Navigation {
+    padding: 10px 60px;
+  }
+
+  .Right-Side {
+    gap: 50px;
+  }
+
+  .Navigation p a {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Navigation {
+    padding: 0 20px;
+  }
+
+  .Navigation p a {
+    font-size: 25px;
+  }
+
+  .Right-Side {
+    gap: 30px;
+  }
+}

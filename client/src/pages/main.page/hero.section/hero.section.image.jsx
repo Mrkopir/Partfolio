@@ -1,0 +1,25 @@
+import photo from "./../../../assets/myPhoto.png"
+import { useRef } from "react";
+
+import { motion, useScroll, useTransform } from "framer-motion"
+
+export default function HeroSectionImage() {
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+
+  const moveDown = useTransform(scrollYProgress, [0, 1], [0, 300])
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+  return (
+    <motion.div
+        ref={ref}
+        style={{y: moveDown, opacity: opacity}}
+    >
+      <div className= "HeroSectionImage">
+          <img src = {photo} alt = "MyImage" />
+      </div>
+    </motion.div>
+  )
+}

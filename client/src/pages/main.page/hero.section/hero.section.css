@@ -1,0 +1,114 @@
+.HeroSection {
+    display: flex;
+    height: 90%;
+    align-items: center;
+    overflow: hidden;
+    width: 95vw;
+    justify-content: space-between;
+    position: relative;
+}
+
+.HeroSectionText{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.HeroSectionText h1{
+    font-size: 180px;
+    padding-left: 80px;
+}
+
+.HeroSectionText h2 {
+    font-size: 130px;
+    color: white;
+    margin: 0;
+    padding-left: 80px;
+}
+
+.HeroSectionText p {
+    font-size: 60px;
+    margin: 0;
+    padding-left: 80px;
+}
+
+.HeroSectionText button {
+    background-color: black;
+    border: none;
+    color: white;
+    width: 15vw;
+    padding: 10px 0;
+    border-radius: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+
+.HeroSectionImage img {
+    height: 88vh;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 2560px) {
+    .HeroSectionText h1 {
+        font-size: 290px;
+        height: 300px;
+    }
+
+    .HeroSectionText h2 {
+        font-size: 170px;
+    }
+
+    .HeroSectionText p {
+        font-size: 80px;
+        margin: 0;
+        padding-left: 80px;
+    }
+
+    .HeroSectionText button {
+        font-size: 80px;
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 1440px) {
+    .HeroSectionText h1 {
+        font-size: 160px;
+    }
+
+    .HeroSectionText p {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .HeroSectionText h1 {
+        font-size: 100px;
+    }
+
+    .HeroSectionText h2 {
+        font-size: 80px;
+    }
+
+    .HeroSectionText p {
+        font-size: 30px;
+    }
+
+    .HeroSectionText button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .HeroSectionText h1 {
+        font-size: 70px;
+    }
+
+    .HeroSectionText h2 {
+        font-size: 60px;
+    }
+}

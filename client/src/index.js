@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 import "./reuseble/enter.motion/enter.motion.style/enter.motion.css"
+import "./reuseble/nav/nav.css"
 import "./index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

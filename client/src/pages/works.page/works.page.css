@@ -1,0 +1,311 @@
+.WorksPageMain {
+    display: flex;
+    height: 88vh;
+    gap: 5%;
+    background-color: #FF6404;
+    padding: 0 30px;
+}
+
+.WorksPageLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 95%;
+}
+
+.WorksPageRight {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    height: 95%;
+}
+
+.WorksPageMainText h1 {
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    font-size: 160px;
+}
+
+.WorksPageMainText span {
+    color: white;
+}
+
+.WorksPageTable {
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    background-color: black;
+    height: 70%;
+    border-radius: 15px;
+}
+
+.WorksPageTableCategories {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+}
+
+.WorksPageTableCategories h3 {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 10px;
+    transition: scale 0.3s;
+}
+
+.WorksPageTableCategories h3:hover:not(.active-category){
+    scale: 1.08;
+    margin: 0;
+}
+
+.WorkPageInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.WorkPageInfo h1 {
+    color: #FF6404;
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.WorkPageInfo p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    text-align: center;
+    margin: 0 10px;
+}
+
+.WorkPageInfoDescription {
+    height: 90px;
+}
+
+.WorkPageInfoTechnologies{
+    color: #FF6404;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+}
+
+.WorkPageInfoButtons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.WorkPageInfoButtons button {
+    color: white;
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    background: #FF6404;
+    border: none;
+    border-radius: 15px;
+    width: 30%;
+    transition: scale 0.3s;
+}
+
+.WorkPageInfoButtons button:hover {
+    scale: 1.1;
+}
+
+.WorksPageBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 93%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.WorksPageBoardImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+}
+
+.WorksPageBoardImage img {
+    width: 90%;
+    border-radius: 20px;
+}
+
+.WorksPageBoardButtons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.WorksPageBoardButtons p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF6404;
+    border: none;
+    border-radius: 15px;
+    width: 30%;
+    height: 60px;
+    transition: scale 0.3s;
+    margin: 0;
+}
+
+i {
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.WorksPageBoardButtons p:hover {
+    scale: 1.1;
+}
+
+@media (min-width: 2560px) {
+    .WorksPageMain {
+        height: 91vh;
+    }
+    
+    .WorksPageMainText h1 {
+        font-size: 300px;
+    }
+
+    .WorksPageTableCategories {
+        font-size: 50px;
+    }
+
+    .WorkPageInfo h1 {
+        font-size: 150px;
+    }
+
+    .WorkPageInfo {
+        height: 200px;
+    }
+
+    .WorkPageInfo p {
+        font-size: 35px;
+    }
+    
+    .WorkPageInfoTechnologies {
+        font-size: 50px;
+    }
+
+    .WorksPageBoardImage {
+        height: 60%;
+    }
+
+    .WorkPageInfoDescription {
+        height: 200px;
+    }
+
+    .WorkPageInfoButtons button {
+        font-size: 80px;
+    }
+
+    .WorksPageBoardButtons p {
+        height: 100px;
+    }
+    i {
+        border-width: 0 10px 10px 0;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .WorksPageMain {
+        height: 89vh;
+    }
+
+    .WorkPageInfo h1 {
+        font-size: 100px;
+    }
+
+    .WorkPageInfoTechnologies {
+        font-size: 25px;
+    }
+
+    .WorkPageInfo p {
+        font-size: 18px;
+    }
+
+    .WorksPageBoardImage {
+        height: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .WorksPageMain {
+        display: block;
+    }
+
+    .WorksPageMainText h1 {
+        font-size: 130px;
+    }
+
+    .WorksPageTableCategories {
+        font-size: 20px;
+    }
+
+    .WorkPageInfo h1 {
+        font-size: 60px;   
+    }
+
+    .WorkPageInfo p {
+        font-size: 15px;
+    }
+
+    .WorkPageInfoTechnologies {
+        font-size: 20px;
+    }
+
+    .WorkPageInfoButtons button {
+        font-size: 30px;
+    }
+
+    .WorksPageBoardButtons p {
+        height: 40px;
+    }
+
+    .WorksPageBoardImage {
+        height: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .WorksPageMainText h1 {
+        font-size: 80px;
+    }
+
+    .WorksPageTable {
+        height: 100%;
+    }
+
+    .WorkPageInfo h1 {
+        font-size: 60px;
+    }
+
+    .WorkPageInfo p {
+        font-size: 13px;
+    }
+
+    .WorkPageInfoDescription {
+        height: 40px;
+    }
+}

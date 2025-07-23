@@ -1,0 +1,35 @@
+import "./skills.page.css"
+
+import MainEnterMotion from "../../reuseble/enter.motion/main.enter.motion"
+import Navigation from "../../reuseble/nav/nav"
+
+import SkillsPageMainText from "./skills.page.main.text"
+import SkillsPageList from "./skills.page.list"
+import SkillsPageBoard from "./skills.page.board"
+
+import { useState } from "react"
+
+
+export default function SkillsPage () {
+    const [activeSkill, setActiveSkill] = useState("frontend")
+
+    const getActiveSkill = (skill) => {
+        setActiveSkill(skill)
+    }
+
+    return (
+        <div className="SkillsPage">
+            <MainEnterMotion text = "SKILLS" />
+            <Navigation />
+            <div className="SkillsPageMain">
+                <div className="SkillsPageMainLeft">
+                    <SkillsPageMainText />
+                    <SkillsPageBoard activeSkill = {activeSkill} />
+                </div>
+                <div className="SkillsPageMainRight">
+                    <SkillsPageList activeSkill = {getActiveSkill} />
+                </div>
+            </div>
+        </div>
+    )
+}

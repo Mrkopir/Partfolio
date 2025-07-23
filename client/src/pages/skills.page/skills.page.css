@@ -1,0 +1,181 @@
+.SkillsPage{
+    height: 100vh;
+    background-color: #FF6404;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.SkillsPageMain{
+    display: flex;
+}
+
+.SkillsPageMainRight {
+    flex: 1;
+}
+
+.SkillsPageMainLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.SkillsPageMainText h1 {
+    font-size: 200px;
+    text-align: center;
+
+}
+
+.SkillsPageMainText span {
+    color: white;
+}
+
+.SkillsPageList {
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    gap: 0 60px;
+}
+
+.SkillsPageListCarts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    height: 35%;
+    background-color: #000000;
+    padding: 20px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.SkillsPageListCartTitle h1 {
+    color: #FF6404;
+    text-align: center;
+}
+
+.SkillsPageListCartDescription p{
+    font-size: 15px;
+    font-family: 'Open Sans';
+    color: white;
+    text-align: center;
+}
+
+.SkillsPageBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: #FF6404;
+    border-radius: 15px;
+    width: 80%;
+    padding: 30px;
+}
+
+.SkillsPageBoard h1 {
+    font-size: 80px;
+    color: #FF6404;
+}
+
+.SkillsPageBoard p {
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+@media (min-width: 2560px) {
+    .SkillsPageMainLeft {
+        justify-content: center;
+    }
+    
+    .SkillsPageMainText h1 {
+        font-size: 300px;
+    }
+
+    .SkillsPageBoard h1 {
+        font-size: 150px;
+    }
+
+    
+    .SkillsPageBoard p {
+        font-size: 30px;
+    }
+    
+    .SkillsPageBoard h3 {
+        font-size: 50px;
+    }
+
+    .SkillsPageBoard h2 {
+        font-size: 40px;
+    }
+    
+    .SkillsPageListCartTitle h1{
+        font-size: 80px;
+    }
+
+    .SkillsPageListCartDescription p {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 1440px) {
+    .WorkPageInfo h1 {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .SkillsPageMainText h1 {
+        font-size: 120px;
+    }
+
+    .SkillsPageListCarts {
+        height: 30%;
+    }
+
+    .SkillsPageList {
+        gap: 0 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .SkillsPageMainText h1 {
+        font-size: 100px;
+    }
+
+    .SkillsPageBoard h1 {
+        font-size: 50px;
+    }
+
+    .SkillsPageBoard p {
+        font-size: 10px;
+    }
+
+    .SkillsPageBoard h3 {
+        font-size: 15px;
+    }
+
+    .SkillsPageBoard h2 {
+        font-size: 15px;
+    }
+    
+    .SkillsPageListCartDescription p {
+        font-size: 12px;
+    }
+
+    .SkillsPageListCartTitle h1 {
+        font-size: 20px;
+    }
+
+    .SkillsPageListCarts {
+        height: 30%;
+    }
+
+    .SkillsPageList {
+        gap: 0 12px;
+    }
+}

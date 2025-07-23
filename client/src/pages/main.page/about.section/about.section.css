@@ -1,0 +1,152 @@
+.AboutSection {
+    display: flex;
+    font-family: 'Bebas Neue', sans-serif;
+    overflow: hidden;
+}
+
+.SkillsPageMainRight {
+
+}
+
+.AboutSectionMainText h1 {
+    font-size: 15px;
+}
+
+.AboutSectionMainText h1 span {
+    color: #FF6404;
+}
+
+.AboutSectionLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 80px;
+    width: 50%;
+}
+
+.AboutSectionLeftList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AboutSectionLeftList p {
+    font-size: 50px;
+    border-bottom: 3px solid #FF6404;
+    color: #FF6404;
+}
+
+.AboutSectionLeftText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.AboutSectionLeftText p {
+    font-size: 25px;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+.AboutSectionMainText h1 {
+    font-size: 200px;
+    white-space: nowrap;
+    color: white;
+    text-align: center;
+}
+
+.AboutSectionMainText h1 span {
+    color: #FF6404;
+}
+
+.AboutSectionRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.AboutSectionRightImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutSectionRightImage img{
+    height: 60vh;
+}
+
+
+@media (min-width: 2560px) {
+    .AboutSection {
+        height: 100%;
+    }
+    
+    .AboutSectionLeft {
+        justify-content: space-evenly;
+    }
+
+    .AboutSectionMainText h1 {
+        font-size: 300px;
+    }
+
+    .AboutSectionLeftList p {
+        font-size: 80px;
+    }
+
+    .AboutSectionLeftText p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .AboutSectionLeft {
+        margin-left: 20px;
+        justify-content: space-around;
+    }
+
+    .AboutSectionLeftList p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .MainPageAbout {
+        display: flex;
+        align-items: center;
+    }
+
+    .AboutSectionLeft {
+        justify-content: space-between;
+        margin-left: 30px;
+    }
+
+    .AboutSectionLeftList p {
+        font-size: 30px;
+    }
+
+    .AboutSectionMainText h1 {
+        font-size: 120px;
+    }
+
+    .AboutSectionLeftText p {
+        font-size: 15px;
+    }
+
+    .AboutSectionRightImage img {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .AboutSectionLeftList p {
+        font-size: 25px;
+    }
+
+    .AboutSectionMainText h1 {
+        font-size: 100px;
+    }
+
+    .AboutSectionLeftText p {
+        font-size: 13px;
+    }
+}

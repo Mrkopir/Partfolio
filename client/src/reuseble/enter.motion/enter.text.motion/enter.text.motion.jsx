@@ -3,20 +3,26 @@ import { useState, useEffect } from "react";
 
 const fonts = [
   "'Bitcount Grid Double', system-ui",
-  "'Pacifico', cursive",
+  "Open Sans",
   "'Bebas Neue', sans-serif",
 ];
 
-export default function EnterTextMotion () {
+export default function EnterTextMotion ({text = "Welcome!"}) {
     const [fontIndex, setFontIndex] = useState(0)
 
 
 
     useEffect(() => {
-        if (fontIndex >= fonts.length) return
-
-        const FontChanger = setInterval(() => {setFontIndex((prev) => prev + 1)}, 1000)
-        return () => clearTimeout(FontChanger)
+        const FontChanger = setInterval(() => {
+            setFontIndex((prev) => {
+                if (prev >= fonts.length - 1) {
+                    clearInterval(FontChanger)
+                    return prev
+                }
+                return prev + 1
+            })
+        }, 1000)
+        return () => clearInterval(FontChanger)
     }, [])
 
     return(
@@ -27,13 +33,13 @@ export default function EnterTextMotion () {
                 initial = {{scale: 1}}
                 animate = {{scale: 2}}
                 exit={{scale: 1}}
-                transition={{duration: 0.3}}
+                transition={{duration: 0.5}}
                 style={{
                     fontFamily: fonts[fontIndex],
                     fontWeight: 300
                 }}
             >
-                <h1>Welcome!</h1>
+                <h1>{text}</h1>
             </motion.div>
         </AnimatePresence>
     )
