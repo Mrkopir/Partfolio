@@ -27,7 +27,7 @@ export default function WorksPageBoard ({getImgPath}) {
                     exit = {{y: "10%", opacity: 0}}
                     transition={{duration: 1}}
                 >
-                    <img src={`http://localhost:5000/api/img/${getImgPath}_${imgIndex}.jpg`} alt="partfolio1" onError={(() => {setImgIndex(0)})} />
+                    <img src={`https://partfolio-jeft.onrender.com/api/img/${getImgPath}_${imgIndex}.jpg`} alt="partfolio1" onError={(() => {setImgIndex(0)})} />
                 </motion.div>
                 <div className="WorksPageBoardButtons">
                     <p onClick={onImgClickPrev}><i className="left"></i></p>
