@@ -16,6 +16,6 @@ app.use("/api/sendData", GetData)
 app.use("/api/img", express.static(path.join("public/img")))
 
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("Server Runing")
 })
