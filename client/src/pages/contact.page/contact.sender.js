@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default function ContactSender (data) {
-    axios.post("http://localhost:5000/api/sendData", data)
+    axios.post("https://partfolio-jeft.onrender.com/api/sendData", data)
     .then(response => {
     console.log("Успіх:", response.data);
     })
