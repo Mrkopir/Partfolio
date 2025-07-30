@@ -18,7 +18,9 @@ export default function HeroSectionImage() {
         style={{y: moveDown, opacity: opacity}}
     >
       <div className= "HeroSectionImage">
+        <picture>
           <img src = {photo} alt = "MyImage" />
+        </picture>
       </div>
     </motion.div>
   )

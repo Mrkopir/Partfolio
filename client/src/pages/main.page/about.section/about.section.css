@@ -2,10 +2,8 @@
     display: flex;
     font-family: 'Bebas Neue', sans-serif;
     overflow: hidden;
-}
-
-.SkillsPageMainRight {
-
+    margin-bottom: 50px;
+    height: 100svh; 
 }
 
 .AboutSectionMainText h1 {
@@ -48,7 +46,7 @@
 }
 
 .AboutSectionMainText h1 {
-    font-size: 200px;
+    font-size: clamp(4.375rem, 2.321rem + 10.268vw, 18.75rem);
     white-space: nowrap;
     color: white;
     text-align: center;
@@ -72,7 +70,8 @@
 }
 
 .AboutSectionRightImage img{
-    height: 60vh;
+    width: clamp(12.5rem, 5.357rem + 35.714vw, 62.5rem);
+    height: auto;
 }
 
 
@@ -80,13 +79,9 @@
     .AboutSection {
         height: 100%;
     }
-    
+
     .AboutSectionLeft {
         justify-content: space-evenly;
-    }
-
-    .AboutSectionMainText h1 {
-        font-size: 300px;
     }
 
     .AboutSectionLeftList p {
@@ -95,6 +90,16 @@
 
     .AboutSectionLeftText p {
         font-size: 40px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .AboutSection {
+        height: 100%;
+    }
+    
+    .AboutSectionLeft {
+        justify-content: space-around;
     }
 }
 
@@ -113,10 +118,11 @@
     .MainPageAbout {
         display: flex;
         align-items: center;
+        height: 70vh;
     }
 
     .AboutSectionLeft {
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-left: 30px;
     }
 
@@ -124,29 +130,60 @@
         font-size: 30px;
     }
 
-    .AboutSectionMainText h1 {
-        font-size: 120px;
-    }
-
     .AboutSectionLeftText p {
         font-size: 15px;
     }
-
-    .AboutSectionRightImage img {
-        height: 50vh;
-    }
 }
 
-@media (max-width: 768px) {
-    .AboutSectionLeftList p {
-        font-size: 25px;
+
+@media (max-width: 1025px) {
+
+    .MainPageAbout {
+        height: 100%;
+    }
+    .AboutSection {
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
-    .AboutSectionMainText h1 {
-        font-size: 100px;
+    .AboutSectionLeft {
+        order: 2;
+    }
+
+    .AboutSectionLeft {
+        width: 100%;
+    }
+
+    .AboutSectionLeftText {
+        flex-direction: row;
+    }
+
+    .AboutSectionLeftList {
+        justify-content: space-evenly;
+    }
+
+    .AboutSectionLeftList p {
+        font-size: clamp(1.25rem, 0.966rem + 1.42vw, 1.875rem);
     }
 
     .AboutSectionLeftText p {
-        font-size: 13px;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .AboutSectionLeft{
+        margin: 0;
+    }
+    .AboutSectionLeftText{
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    .AboutSectionRight {
+        width: 100%;
     }
 }

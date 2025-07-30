@@ -6,6 +6,12 @@
 
 .MainPageAbout{
     background-color: black;
-    height: 100vh;
     z-index: 10;
+    height: 100svh;
+}
+
+@media (max-width: 1025px) {
+    .MainPageAbout {
+        height: 100%;
+    }
 }

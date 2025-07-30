@@ -12,7 +12,9 @@ export default function AboutSectionRightImage() {
     return (
         <motion.div style={{ y: moveUp, opacity: opacity }}>
             <div className="AboutSectionRightImage" ref={ref}>
+                <picture>
                     <img src={photo} alt="AboutImage" />
+                </picture>
             </div>
         </motion.div>
     );

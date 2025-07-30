@@ -83,10 +83,6 @@
     margin: 0 10px;
 }
 
-.WorkPageInfoDescription {
-    height: 90px;
-}
-
 .WorkPageInfoTechnologies{
     color: #FF6404;
     font-family: 'Bebas Neue', sans-serif;
@@ -97,6 +93,7 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .WorkPageInfoButtons button {
@@ -134,7 +131,7 @@
 }
 
 .WorksPageBoardImage img {
-    width: 90%;
+    width: 80%;
     border-radius: 20px;
 }
 
@@ -228,13 +225,23 @@ i {
     }
 }
 
+@media (max-width: 1920px) {
+    .WorksPageMainText h1 {
+        font-size: 200px;
+    }
+}
+
 @media (max-width: 1440px) {
     .WorksPageMain {
         height: 89vh;
     }
 
+    .WorksPageMainText h1 {
+        font-size: 150px;
+    }
+
     .WorkPageInfo h1 {
-        font-size: 100px;
+        font-size: 90px;
     }
 
     .WorkPageInfoTechnologies {
@@ -251,12 +258,37 @@ i {
 }
 
 @media (max-width: 1024px) {
+    .WorksPage {
+        height: 100vh;
+    }
     .WorksPageMain {
         display: block;
+        height: auto;
+    }
+
+    .WorksPageBoardImage {
+        margin: 50px 0;
+    }
+
+    .WorksPageLeft {
+        height: auto;
+    }
+
+    .WorksPageRight {
+        height: auto;
+    }
+
+    .WorksPageBoard {
+        margin: 20px 0;
+        height: auto;
+    }
+
+    .WorksPageBoardButtons {
+        margin: 50px;
     }
 
     .WorksPageMainText h1 {
-        font-size: 130px;
+        font-size: clamp(4.375rem, 1.818rem + 12.784vw, 10rem);
     }
 
     .WorksPageTableCategories {
@@ -282,20 +314,9 @@ i {
     .WorksPageBoardButtons p {
         height: 40px;
     }
-
-    .WorksPageBoardImage {
-        height: 85%;
-    }
 }
 
 @media (max-width: 768px) {
-    .WorksPageMainText h1 {
-        font-size: 80px;
-    }
-
-    .WorksPageTable {
-        height: 100%;
-    }
 
     .WorkPageInfo h1 {
         font-size: 60px;
@@ -305,7 +326,54 @@ i {
         font-size: 13px;
     }
 
-    .WorkPageInfoDescription {
-        height: 40px;
+    .WorksPageBoardImage {
+        height: 60%;
+    }
+
+    .WorksPageRight {
+        height: 60vh;
+    } 
+
+}
+
+@media (min-width: 450px) and (max-width: 1023px) {
+    .WorksPageRight{
+        height: auto;
+    }
+    .WorksPageBoard {
+        height: auto;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .WorksPage{
+        height: 100vh;
+    }
+
+    .WorksPageTableCategories {
+        font-size: clamp(0.938rem, -0.015rem + 4.762vw, 1.25rem);
+    }
+
+    .WorkPageInfo h1 {
+        font-size: clamp(1.875rem, -1.935rem + 19.048vw, 3.125rem);
+    }
+
+    .active-category{
+        border: 5px solid rgb(255, 100, 4) !important;
+    }
+
+    .WorkPageInfoTechnologies {
+        font-size: clamp(0.688rem, -0.074rem + 3.81vw, 0.938rem);
+    }
+
+    .WorkPageInfoButtons button {
+        font-size: clamp(1.25rem, -0.655rem + 9.524vw, 1.875rem);
+    }
+
+    .WorksPageBoard,
+    .WorksPageRight,
+    .WorksPageBoardImage {
+        height: auto;
     }
 }

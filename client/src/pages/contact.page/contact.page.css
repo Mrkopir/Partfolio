@@ -113,7 +113,6 @@ input:focus {
 .SocialColumnRow{
     display: flex;
     justify-content: space-around;
-    width: 100%;
 }
 
 
@@ -249,18 +248,27 @@ input:focus {
     }
 
     .ContactPageMainText h1 {
-        font-size: 120px;
+        font-size: 100px;
     }
 }
 
 @media (max-width: 1024px) {
-
     .ContactPageMain {
-        height: 90vh;
+        display: block;
+        height: 100%;
     }
 
     .ContactPageMainText h1 {
-        font-size: 90px;
+        font-size: clamp(3.125rem, 1.989rem + 5.682vw, 5.625rem);
+    }
+
+    .ContactPageForm form {
+        width: 60%;
+    }
+
+    .SocialColumnRow {
+        gap: 30px;
+        text-align: center;
     }
 
     .ContactTopSection h2 {
@@ -319,22 +327,12 @@ input:focus {
     }
 }
 
-@media (max-width: 1024px) {
-    .ContactPageMain {
-        display: block;
-        height: 100%;
-    }
-
-    .ContactPageForm form {
-        width: 60%;
-    }
-}
-
 @media (max-width: 768px) {
     .ContactPageForm form {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        width: 90%;
     }
 
     .ContactPageForm form div {
@@ -344,5 +342,21 @@ input:focus {
 
     .ContactPageForm form div label {
         text-align: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .ContactTopItemsRow {
+        flex-wrap: nowrap;
+        gap: 40px;
+    }
+
+    .SocialColumnRow {
+        gap: 10px;
+        text-align: center;
+    }
+
+    .MessengerColumn h2, .SocialColumn h2 {
+        font-size: 20px;
     }
 }
