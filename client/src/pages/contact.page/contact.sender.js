@@ -1,19 +1,11 @@
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  console.log("Submitting...");
-  alert("Submitting..."); // щоб точно побачити на iPhone
+import axios from "axios";
 
-  try {
-    const res = await fetch("/api/sendData", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    if (!res.ok) throw new Error("Failed");
-
-    alert("Success!");
-  } catch (err) {
-    alert("Error: " + err.message);
-  }
-};
+export default function ContactSender (data) {
+    axios.post("https://partfolio-jeft.onrender.com/api/sendData", data)
+    .then(response => {
+    console.log("Успіх:", response.data);
+    })
+    .catch(error => {
+    console.error("Помилка:", error.message);
+  });
+}
