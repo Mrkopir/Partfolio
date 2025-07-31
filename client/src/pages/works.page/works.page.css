@@ -2,9 +2,12 @@ body {
    background-color: #FF6404; 
 }
 
+.WorksPage {
+    min-height: 100vh;
+}
+
 .WorksPageMain {
     display: flex;
-    height: 100vh;
     gap: 5%;
     padding: 0 30px;
 }
@@ -12,15 +15,15 @@ body {
 .WorksPageLeft {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex: 1;
     height: 95%;
 }
 
 .WorksPageRight {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     flex: 1;
-    height: 95%;
 }
 
 .WorksPageMainText h1 {
@@ -37,9 +40,7 @@ body {
 .WorksPageTable {
     display: flex;
     flex-direction: column;
-    gap: 8%;
     background-color: black;
-    height: 70%;
     border-radius: 15px;
 }
 
@@ -138,16 +139,15 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    height: 93%;
     width: 100%;
     border-radius: 15px;
+    height: 100%;
 }
 
 .WorksPageBoardImage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70%;
 }
 
 .WorksPageBoardImage img {
@@ -211,11 +211,6 @@ i {
     .WorkPageInfo h1 {
         font-size: 150px;
     }
-
-    .WorkPageInfo {
-        height: 200px;
-    }
-
     .WorkPageInfo p {
         font-size: 35px;
     }
@@ -252,9 +247,6 @@ i {
 }
 
 @media (max-width: 1440px) {
-    .WorksPageMain {
-        height: 89vh;
-    }
 
     .WorksPageMainText h1 {
         font-size: 150px;
@@ -274,6 +266,10 @@ i {
 
     .WorksPageBoardImage {
         height: 60%;
+    }
+
+    .WorksPageTable {
+        height: auto;
     }
 }
 
