@@ -3,7 +3,6 @@
     font-family: 'Bebas Neue', sans-serif;
     overflow: hidden;
     margin-bottom: 50px;
-    height: 100svh; 
 }
 
 .AboutSectionMainText h1 {
@@ -132,6 +131,10 @@
 
     .AboutSectionLeftText p {
         font-size: 15px;
+    }
+
+    .HeroSectionText {
+        padding: 0;
     }
 }
 

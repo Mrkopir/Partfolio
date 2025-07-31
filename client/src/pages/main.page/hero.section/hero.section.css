@@ -1,6 +1,5 @@
 .HeroSection {
     display: flex;
-    height: 95svh;
     width: auto;
     align-items: flex-end;
     overflow: hidden;
@@ -41,7 +40,7 @@
     border-radius: 15px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 .HeroSectionImage {
