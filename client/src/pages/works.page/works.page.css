@@ -10,6 +10,7 @@ body {
     display: flex;
     gap: 5%;
     padding: 0 30px;
+    margin-bottom: 20px;
 }
 
 .WorksPageLeft {

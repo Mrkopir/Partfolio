@@ -1,5 +1,5 @@
 body {
-        background-color: black;
+    background-color: black;
 }
 
 .ContactPageMain {
@@ -7,11 +7,11 @@ body {
     background-color: black;
     color: white;
     overflow: hidden;
-    height: 90vh;
+    min-height: 100vh;
 }
 
 input:focus {
-  outline: none;
+    outline: none;
 }
 
 .ContactPageLeft {
@@ -203,10 +203,6 @@ input:focus {
 
 @media (min-width: 2560px) {
 
-    .ContactPageMain {
-        height: 91vh;
-    }
-
     .ContactPageLeft {
         justify-content: center;
     }
@@ -216,7 +212,6 @@ input:focus {
     }
     
     .ContactPageForm form {
-        height: 90%;
         justify-content: center;
     }
 
