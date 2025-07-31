@@ -6,6 +6,7 @@
     min-height: 100vh;
     justify-content: space-between;
     position: relative;
+    background-color: #FF6404;
 }
 
 .HeroSectionText{

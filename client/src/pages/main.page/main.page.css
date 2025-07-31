@@ -1,13 +1,15 @@
+body{
+    background-color: black;
+}
+
 .MainPage {
     display: flex;
     flex-direction: column;
-    background-color: #FF6404;
 }
 
 .MainPageAbout{
     background-color: black;
     z-index: 10;
-    height: 100svh;
 }
 
 @media (max-width: 1025px) {
