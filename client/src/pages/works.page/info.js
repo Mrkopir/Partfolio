@@ -1,13 +1,13 @@
 export const projects = [
   {
-    title: "Modern Landing Page",
+    title: "Landing Page",
     category: "frontend",
     shortname: "",
     description: "Адаптивний лендинг з анімацією, побудований на React з використанням TailwindCSS та Framer Motion.",
     technologies: ["React", "TailwindCSS", "Framer Motion"],
   },
   {
-    title: "RESTful API for Blog",
+    title: "API for Blog",
     category: "backend",
     shortname: "blog",
     description: "Backend API для блогу з авторизацією, CRUD-операціями та зберіганням в MongoDB.",

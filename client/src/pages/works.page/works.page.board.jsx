@@ -16,10 +16,6 @@ export default function WorksPageBoard ({getImgPath}) {
         setImgIndex((prev) => prev < 0 ? prev - 1 : setImgIndex(0))
     }
 
-    const getImg = async () => {
-        return await `https://partfolio-jeft.onrender.com/api/img/${getImgPath}_${imgIndex}.jpg`
-    }
-
     return(
         <AnimatePresence>
             <div className="WorksPageBoard">

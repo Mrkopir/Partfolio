@@ -39,15 +39,13 @@ export default function WorksPageTable ({sendImgPath}) {
         <div className="WorksPageTable">
             <div className="WorksPageTableCategories">
                 {categories.map((category) => {
-                    return <h3 
-                    key={category} 
-                    onClick={(e) => onCategoriesClick(e)} 
-                    className={ActiveCategoriesButton === category.toLocaleLowerCase() ? 'active-category' : ""}  
-                    style={{
-                        border: ActiveCategoriesButton === category.toLocaleLowerCase() ? "10px solid #FF6404" : "none",
-                        borderBottomLeftRadius: "10px",
-                        borderBottomRightRadius: "10px",    
-                    }}>{category.toLocaleUpperCase()}</h3>
+                    return (
+                        <div key={category} onClick={(e) => onCategoriesClick(e)} className={ActiveCategoriesButton === category.toLocaleLowerCase() ? 'active-category' : ""}  >
+                            <h3 
+                            >{category.toLocaleUpperCase()}
+                            </h3>
+                        </div>
+                    )
                 })}
             </div>
             <AnimatePresence mode="wait">

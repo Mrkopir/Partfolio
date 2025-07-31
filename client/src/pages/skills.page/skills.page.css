@@ -1,6 +1,10 @@
+body {
+   background-color: #FF6404; 
+}
+
+
 .SkillsPage{
     height: 100vh;
-    background-color: #FF6404;
     font-family: 'Bebas Neue', sans-serif;
 }
 

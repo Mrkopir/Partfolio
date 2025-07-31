@@ -1,8 +1,11 @@
+body {
+   background-color: #FF6404; 
+}
+
 .WorksPageMain {
     display: flex;
-    height: 91vh;
+    height: 100vh;
     gap: 5%;
-    background-color: #FF6404;
     padding: 0 30px;
 }
 
@@ -58,8 +61,24 @@
     transition: scale 0.3s;
 }
 
+.active-category {
+    position: relative;
+    padding: 5px;
+    background: #FF6404;
+    border: 2px solid #FF6404;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: fit-content;
+}
+
+.active-category h3 {
+    border: 3px solid #FF6404;
+    border-radius: 10px;
+    background: black;
+}
+
 .WorksPageTableCategories h3:hover:not(.active-category){
-    scale: 1.08;
+    scale: 1.03;
     margin: 0;
 }
 
@@ -73,6 +92,7 @@
     color: #FF6404;
     font-size: 50px;
     font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
 }
 
 .WorkPageInfo p {
@@ -177,7 +197,7 @@ i {
 
 @media (min-width: 2560px) {
     .WorksPageMain {
-        height: 91vh;
+        height: 100vh;
     }
     
     .WorksPageMainText h1 {
@@ -259,7 +279,7 @@ i {
 
 @media (max-width: 1024px) {
     .WorksPage {
-        height: 100%;
+        height: 100vh;
     }
     .WorksPageMain {
         display: block;
@@ -338,13 +358,8 @@ i {
 
 @media (min-width: 450px) and (max-width: 1023px) {
     .WorksPage {
-        height: auto;
+        height: 100vh;
     }
-    .WorksPageMain {
-        display: block;
-        height: 100%;
-    }
-
     .WorksPageRight{
         height: auto;
     }
@@ -356,7 +371,7 @@ i {
 
 @media (min-width: 320px) and (max-width: 450px) {
     .WorksPage{
-        height: 100%;
+        height: 100vh;
     }
 
     .WorksPageTableCategories {
@@ -369,6 +384,11 @@ i {
 
     .active-category{
         border: 5px solid rgb(255, 100, 4) !important;
+        padding: 0;
+    }
+
+    .active-category h3{
+        padding: 0 5px;
     }
 
     .WorkPageInfoTechnologies {
