@@ -12,7 +12,7 @@ export default function EnterProgressMotion ({text = "Home"}) {
                 }
                 return prev + 1
             })
-        }, 20)
+        }, 24)
         return () => clearInterval(progressinterval)
     }, [])
     
@@ -25,7 +25,7 @@ export default function EnterProgressMotion ({text = "Home"}) {
                 }
                 return prev + "."
             })
-        }, 500)
+        }, 700)
         return () => clearInterval(dotsinterval)
     }, [])
 
