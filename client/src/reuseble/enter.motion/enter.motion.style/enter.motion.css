@@ -6,15 +6,33 @@
     z-index: 999;
 }
 
-.motionText {
+.Progress{
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.motionText h1 {
-    color: white;
-    font-size: clamp(40px, 10vw, 200px);
+.Progress label{
+    font-size: clamp(3.125rem, 2.232rem + 4.464vw, 9.375rem);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.Progress progress {
+    width: 70%;
+    height: 5%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Progress progress::-webkit-progress-value {
+    background-color: black;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .Progress progress {
+        width: 90%;
+    }
 }

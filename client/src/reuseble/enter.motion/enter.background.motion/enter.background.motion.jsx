@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import EnterTextMotion from "./../enter.text.motion/enter.text.motion"
+import EnterProgressMotion from "./../enter.text.motion/enter.progress.motion"
 
 export default function EnterBackgroundMotion ({text}) {
     const [showBackground, setShowBackground] = useState(true)
 
     useEffect(() => {
-        const BackgroundInterval = setInterval(() => {setShowBackground(false)}, 3000)
+        const BackgroundInterval = setInterval(() => {setShowBackground(false)}, 2500)
         return () => clearTimeout(BackgroundInterval)
     }, [])
 
@@ -19,7 +19,7 @@ export default function EnterBackgroundMotion ({text}) {
                     exit={{y: "-100%", opacity: 0}}
                     transition={{duration: 0.9}}
                 >
-                <EnterTextMotion text = {text} />
+                <EnterProgressMotion text = {text} />
                 </motion.div>
             )}
         </AnimatePresence>
