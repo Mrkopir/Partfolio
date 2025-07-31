@@ -16,19 +16,23 @@ export default function WorksPageBoard ({getImgPath}) {
         setImgIndex((prev) => prev < 0 ? prev - 1 : setImgIndex(0))
     }
 
+    const getImg = async () => {
+        return await `https://partfolio-jeft.onrender.com/api/img/${getImgPath}_${imgIndex}.jpg`
+    }
+
     return(
         <AnimatePresence>
             <div className="WorksPageBoard">
-                <motion.div
-                    className="WorksPageBoardImage"
-                    key={`${imgIndex}_${getImgPath}`}
-                    initial = {{y: "0%", opacity: 0}}
-                    animate = {{y: "5%", opacity: 1}}
-                    exit = {{y: "10%", opacity: 0}}
-                    transition={{duration: 1}}
-                >
-                    <img src={`https://partfolio-jeft.onrender.com/api/img/${getImgPath}_${imgIndex}.jpg`} alt="partfolio1" onError={(() => {setImgIndex(0)})} />
-                </motion.div>
+                    <motion.div
+                        className="WorksPageBoardImage"
+                        key={`${imgIndex}_${getImgPath}`}
+                        initial = {{y: "0%", opacity: 0}}
+                        animate = {{y: "5%", opacity: 1}}
+                        exit = {{y: "10%", opacity: 0}}
+                        transition={{duration: 1}}
+                    >
+                        <img src={`https://partfolio-jeft.onrender.com/api/img/${getImgPath}_${imgIndex}.jpg`} alt="partfolio1" onError={(() => {setImgIndex(0)})} />
+                    </motion.div>
                 <div className="WorksPageBoardButtons">
                     <p onClick={onImgClickPrev}><i className="left"></i></p>
                     <p onClick={onImgClickNext}><i className="right"></i></p>

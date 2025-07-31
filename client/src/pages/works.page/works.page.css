@@ -1,6 +1,6 @@
 .WorksPageMain {
     display: flex;
-    height: 88vh;
+    height: 91vh;
     gap: 5%;
     background-color: #FF6404;
     padding: 0 30px;
@@ -73,7 +73,6 @@
     color: #FF6404;
     font-size: 50px;
     font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
 }
 
 .WorkPageInfo p {
@@ -260,11 +259,11 @@ i {
 
 @media (max-width: 1024px) {
     .WorksPage {
-        height: 100vh;
+        height: 100%;
     }
     .WorksPageMain {
         display: block;
-        height: auto;
+        height: 100%;
     }
 
     .WorksPageBoardImage {
@@ -338,6 +337,14 @@ i {
 }
 
 @media (min-width: 450px) and (max-width: 1023px) {
+    .WorksPage {
+        height: auto;
+    }
+    .WorksPageMain {
+        display: block;
+        height: 100%;
+    }
+
     .WorksPageRight{
         height: auto;
     }
@@ -349,7 +356,7 @@ i {
 
 @media (min-width: 320px) and (max-width: 450px) {
     .WorksPage{
-        height: 100vh;
+        height: 100%;
     }
 
     .WorksPageTableCategories {
