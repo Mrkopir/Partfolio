@@ -160,6 +160,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin: 30px;
 }
 
 .WorksPageBoardButtons p {
@@ -276,7 +277,7 @@ i {
     }
 
     .WorksPageBoardImage {
-        margin: 50px 0;
+        margin: 40px 0;
     }
 
     .WorksPageLeft {
@@ -293,7 +294,7 @@ i {
     }
 
     .WorksPageBoardButtons {
-        margin: 50px;
+        margin: 20px;
     }
 
     .WorksPageMainText h1 {

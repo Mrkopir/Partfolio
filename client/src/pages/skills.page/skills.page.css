@@ -33,7 +33,6 @@ body {
 .SkillsPageMainText h1 {
     font-size: 200px;
     text-align: center;
-
 }
 
 .SkillsPageMainText span {
@@ -60,6 +59,7 @@ body {
     padding: 20px 20px;
     border-radius: 15px;
     cursor: pointer;
+    margin: 20px;
 }
 
 .SkillsPageListCartTitle h1 {
