@@ -197,10 +197,6 @@ i {
 }
 
 @media (min-width: 2560px) {
-    .WorksPageMain {
-        height: 100vh;
-    }
-    
     .WorksPageMainText h1 {
         font-size: 300px;
     }
@@ -222,10 +218,6 @@ i {
 
     .WorksPageBoardImage {
         height: 60%;
-    }
-
-    .WorkPageInfoDescription {
-        height: 200px;
     }
 
     .WorkPageInfoButtons button {

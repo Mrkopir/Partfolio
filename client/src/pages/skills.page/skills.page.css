@@ -4,12 +4,16 @@ body {
 
 
 .SkillsPage{
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     font-family: 'Bebas Neue', sans-serif;
 }
 
 .SkillsPageMain{
     display: flex;
+    align-self: center;
+    min-height: 90vh;
 }
 
 .SkillsPageMainRight {
