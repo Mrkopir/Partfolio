@@ -21,7 +21,7 @@ export default function SkillsPageList({ activeSkill }) {
                         activeSkill(id);
                     }}
                     initial={{ scale: 1 }}
-                    animate={{ scale: isActive ? 1.08 : 1 }}
+                    animate={{ scale: isActive ? 1.03 : 1 }}
                     transition={{ duration: 0.3 }}
                 >
                     <div className="SkillsPageListCartTitle">

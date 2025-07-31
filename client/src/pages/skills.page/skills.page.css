@@ -142,6 +142,10 @@ body {
     .WorkPageInfo h1 {
         font-size: 80px;
     }
+
+    .SkillsPageListCarts {
+        margin: 5px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -158,7 +162,7 @@ body {
     }
 
     .SkillsPageListCarts {
-        height: 30%;
+        height: auto;
     }
 
     .SkillsPageList {
@@ -220,5 +224,8 @@ body {
 
     .SkillsPageListCarts {
         padding: 15px;
+        margin: 5px;
     }
+
+
 }
