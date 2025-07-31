@@ -200,10 +200,6 @@ body {
         font-size: 20px;
     }
 
-    .SkillsPageListCarts {
-        height: 30%;
-    }
-
     .SkillsPageList {
         gap: 0 50px;
     }
@@ -218,7 +214,6 @@ body {
     }
 
     .SkillsPageListCarts {
-        height: 30%;
         transform: scale(1.05);
     }
 

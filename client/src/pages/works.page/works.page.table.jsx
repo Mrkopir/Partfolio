@@ -26,12 +26,18 @@ export default function WorksPageTable ({sendImgPath}) {
     }
 
     const onProjClickNext = () => {
-        setProjectIndex((prev) => prev < filteredProjects.length - 1 ? prev + 1 : 0)
-    }
+        const newIndex = projectIndex < filteredProjects.length - 1 ? projectIndex + 1 : 0;
+        setProjectIndex(newIndex);
+        const currentProject = filteredProjects[projectIndex];
+        sendImgPath(currentProject.shortname);
+    };
 
     const onProjClickPrev = () => {
-        setProjectIndex((prev) => prev > 0 ? prev - 1 : filteredProjects.length - 1)
-    }
+        const newIndex = projectIndex > 0 ? projectIndex - 1 : filteredProjects.length - 1;
+        setProjectIndex(newIndex);
+        const currentProject = filteredProjects[newIndex];
+        sendImgPath(currentProject.shortname);
+    };
 
     const project = filteredProjects[projectIndex]
 
@@ -60,16 +66,18 @@ export default function WorksPageTable ({sendImgPath}) {
                         <h1>{project.title}</h1>
                     </motion.div>
                     <motion.div
-                        className="WorkPageInfoDescription"
-
+                        style = {{textAlign: "center"}}
                         initial = {{opacity: 0}}
                         animate = {{opacity: 1}}
                         exit = {{opacity: 0}}
                         transition={{duration: 1}}
                     >
-                    <p>{project.description}</p>
+                        <p className="WorkPageInfoDescription">{project.description}</p>
+                        <h3 className="WorkPageInfoTechnologies">{project.technologies.join(" | ")}</h3>
+                        <div>
+                            <a className="WorkPageInfoLink" href={project.link}><p>{project.link}</p></a>
+                        </div>
                     </motion.div>
-                    <h3 className="WorkPageInfoTechnologies">{project.technologies.join(" | ")}</h3>
                     <div className="WorkPageInfoButtons">
                         <button onClick={onProjClickPrev}>Prevent</button>
                         <button onClick={onProjClickNext}>Next</button>
