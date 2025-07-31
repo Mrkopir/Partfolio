@@ -5,7 +5,7 @@ export default function AboutSectionLeftList() {
 
     const moveLeft = useTransform(scrollYProgress, [0, 1], [100, 0])
     const moveRight = useTransform(scrollYProgress, [0, 1], [-100, 0])
-    const moveDown = useTransform(scrollYProgress, [0, 1], [-100, 0])
+    const moveDown = useTransform(scrollYProgress, [0, 1], [100, 0])
     const opacity = useTransform(scrollYProgress, [0, 1], [0, 1])
     return (
         <div className="AboutSectionLeftList">

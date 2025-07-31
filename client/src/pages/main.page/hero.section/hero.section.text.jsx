@@ -26,7 +26,7 @@ export default function HeroSectionText() {
         <motion.div
           style={{x: moveLeft, opacity: opacity}}
         >
-          <button>My Works</button>
+          <a href="/works"><button>My Works</button></a>
         </motion.div>
     </div>
   )

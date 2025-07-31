@@ -3,6 +3,7 @@ import ContactSender from "./contact.sender"
 
 export default function ContactPageForm () {
     const [data, setData] = useState({})
+    const [error, setError] = useState(false)
     
     const onHandleChange = (e) => {
         const {name, value} = e.target
@@ -10,10 +11,14 @@ export default function ContactPageForm () {
             ...prev,
             [name]: value
         }))
+        setError(false)
     }
 
     const onHandleSubmit = async (e) => {
+        e.preventDefault()
+        if (!data.name || !data.email || !data.phone || !data.question) return setError(true)
         await ContactSender(data)
+        window.location.reload();
     }
 
     return(
@@ -36,7 +41,10 @@ export default function ContactPageForm () {
                     <input id = "question" name = "question" onChange={onHandleChange} />
                 </div>
                 <div className="Button">
-                <button type="submit">Submit</button>
+                    <button type="submit">Submit</button>
+                </div>
+                <div style={{display: error === true ? "block" : "none", textAlign: "center", fontFamily: "'Bebas Neue', sans-serif", margin: "0", fontSize: "clamp(1.25rem, 0.893rem + 1.786vw, 3.75rem)"}}>
+                    <p style={{margin: "0"}}>Please fill in all the fields</p>
                 </div>
             </form>
         </div>

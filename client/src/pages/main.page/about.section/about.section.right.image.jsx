@@ -7,10 +7,9 @@ export default function AboutSectionRightImage() {
     const { scrollYProgress } = useScroll();
 
     const moveUp = useTransform(scrollYProgress, [0, 1], [100, 0]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
-        <motion.div style={{ y: moveUp, opacity: opacity }}>
+        <motion.div style={{ y: moveUp }}>
             <div className="AboutSectionRightImage" ref={ref}>
                 <picture>
                     <img src={photo} alt="AboutImage" />

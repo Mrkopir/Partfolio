@@ -18,20 +18,14 @@ export default function ContactPageData() {
             <div className="ContactBottomRow">
                 <div className="MessengerColumn">
                     <h2>Messengers</h2>
-                    <p>Telegram</p>
-                    <p>Viber</p>
+                    <a href="https://t.me/DiSp4tCheer"><p>Telegram</p></a>
                 </div>
                 <div className="SocialColumn">
                     <h2>Social Networks</h2>
                     <div className="SocialColumnRow">
-                        <div>
-                            <p>Instagram</p>
-                            <p>LinkedIn</p>
-                        </div>
-                        <div>
-                            <p>GitHub</p>
-                            <p>Facebook</p>
-                        </div>
+                        <a href="https://www.instagram.com/vova_chetvertinovski?igsh=MW01ZnZ4cmp4d2ZxMw%3D%3D&utm_source=qr"><p>Instagram</p></a>
+                        <a href="https://www.linkedin.com/in/vova-chetvertynivskyi-095706370"><p>LinkedIn</p></a>
+                        <a href="https://github.com/Mrkopir"><p>GitHub</p></a>
                     </div>
                 </div>
             </div>
