@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.jsx';
 
 import "./reuseble/enter.motion/enter.motion.style/enter.motion.css"
 import "./reuseble/nav/nav.css"

@@ -17,7 +17,7 @@ export default function ContactPageForm () {
     const onHandleSubmit = async (e) => {
         e.preventDefault()
         if (!data.name || !data.email || !data.phone || !data.question) return setError(true)
-        await ContactSender(data).then(() => window.location.reload())
+        console.log(await ContactSender(data).then(() => window.location.reload()))
     }
 
     return(
