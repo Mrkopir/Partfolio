@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ContactSender from "./contact.sender"
 
-export default function ContactPageForm () {
+export default function ContactPageForm ({status}) {
     const [data, setData] = useState({})
     const [error, setError] = useState(false)
     
@@ -17,7 +17,11 @@ export default function ContactPageForm () {
     const onHandleSubmit = async (e) => {
         e.preventDefault()
         if (!data.name || !data.email || !data.phone || !data.question) return setError(true)
-        console.log(await ContactSender(data).then(() => window.location.reload()))
+        status(true)
+        await new Promise(resolve => setTimeout(resolve, 2000))
+        await ContactSender(data)
+        status(false)
+        window.location.reload()
     }
 
     return(
