@@ -11,9 +11,9 @@ import { useState } from "react"
 
 
 export default function SkillsPage () {
-    const [activeSkill, setActiveSkill] = useState("frontend")
+    const [activeSkill, setActiveSkill] = useState<string>("frontend")
 
-    const getActiveSkill = (skill) => {
+    const getActiveSkill = (skill: string) =>{
         setActiveSkill(skill)
     }
 

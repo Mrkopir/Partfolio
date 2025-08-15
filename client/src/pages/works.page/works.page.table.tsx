@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const categories = ["FRONTEND", "BACKEND", "FULLSTACK"]
 
-export default function WorksPageTable ({sendImgPath}) {
+export default function WorksPageTable ({sendImgPath}: {sendImgPath: any}) {
     const [ActiveCategoriesButton, setActiveCategoriesButton] = useState("frontend") 
     const [projectIndex, setProjectIndex] = useState(0)
 
@@ -21,8 +21,9 @@ export default function WorksPageTable ({sendImgPath}) {
         }
     }, [projectIndex, filteredProjects, sendImgPath])
 
-    const onCategoriesClick = (e) => {
-        setActiveCategoriesButton((e.target.textContent).toLowerCase())
+    const onCategoriesClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        const e = event?.target as HTMLElement
+        setActiveCategoriesButton((e?.textContent).toLowerCase())
     }
 
     const onProjClickNext = () => {
@@ -46,7 +47,7 @@ export default function WorksPageTable ({sendImgPath}) {
             <div className="WorksPageTableCategories">
                 {categories.map((category) => {
                     return (
-                        <div key={category} onClick={(e) => onCategoriesClick(e)} className={ActiveCategoriesButton === category.toLocaleLowerCase() ? 'active-category' : ""}  >
+                        <div key={category} onClick={onCategoriesClick} className={ActiveCategoriesButton === category.toLocaleLowerCase() ? 'active-category' : ""}  >
                             <h3 
                             >{category.toLocaleUpperCase()}
                             </h3>

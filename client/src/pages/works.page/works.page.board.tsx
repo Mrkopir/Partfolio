@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
-export default function WorksPageBoard ({getImgPath}) {
+export default function WorksPageBoard ({getImgPath}: {getImgPath: string}) {
     const [imgIndex, setImgIndex] = useState(0)
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function WorksPageBoard ({getImgPath}) {
     }
 
     const onImgClickPrev = () => {
-        setImgIndex((prev) => prev < 0 ? prev - 1 : setImgIndex(0))
+        setImgIndex((prev: number) => prev < 0 ? prev - 1 : 0)
     }
 
     return(

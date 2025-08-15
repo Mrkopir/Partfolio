@@ -32,7 +32,7 @@ export default function EnterProgressMotion ({text = "Home"}) {
     return(
         <div className="Progress">
             <label htmlFor = "progressbar">Loading {text + dots}</label>
-            <progress name = "progressbar" value={progressbar} max="100"></progress>
+            <progress value={progressbar} max="100"></progress>
         </div>
     )
 }

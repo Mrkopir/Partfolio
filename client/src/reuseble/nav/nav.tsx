@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const text = [
+import "./nav.css"
+const text: string[] = [
   "Volodymyr Chetvertynivskyi",
   "Full Stack Developer",
 ];

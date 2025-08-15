@@ -12,7 +12,7 @@ export default function ContactPage () {
     const [loading, setLoading] = useState(false)
 
 
-    const getResponceStatus = (status) => {
+    const getResponceStatus = (status: boolean) => {
         setLoading(status)
     }
     return (

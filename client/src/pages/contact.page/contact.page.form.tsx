@@ -1,11 +1,19 @@
-import { useState } from "react"
+import { FormEvent, ChangeEvent, useState } from "react"
 import ContactSender from "./contact.sender"
 
-export default function ContactPageForm ({status}) {
-    const [data, setData] = useState({})
+interface data {
+    name?: string;
+    email?: string;
+    phone?: string;
+    question?: string;
+}
+
+
+export default function ContactPageForm ({status}: {status: unknown}) {
+    const [data, setData] = useState<data>({})
     const [error, setError] = useState(false)
     
-    const onHandleChange = (e) => {
+    const onHandleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.target
         setData((prev) => ({
             ...prev,
@@ -14,13 +22,17 @@ export default function ContactPageForm ({status}) {
         setError(false)
     }
 
-    const onHandleSubmit = async (e) => {
+    const onHandleSubmit = async (e: FormEvent<HTMLElement>) => {
         e.preventDefault()
         if (!data.name || !data.email || !data.phone || !data.question) return setError(true)
-        status(true)
+        if(typeof status === "function"){
+            status(true)
+        }
         await new Promise(resolve => setTimeout(resolve, 2000))
         await ContactSender(data)
-        status(false)
+        if(typeof status === "function"){
+            status(false)
+        }
         window.location.reload()
     }
 

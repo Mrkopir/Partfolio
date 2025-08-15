@@ -2,7 +2,7 @@ import skillsData from "./skillsData"
 
 import { motion } from "framer-motion"
 
-export default function SkillsPageBoard ({activeSkill}) {
+export default function SkillsPageBoard ({activeSkill}: {activeSkill: string}) {
     return(
         <motion.div 
             className="SkillsPageBoard"

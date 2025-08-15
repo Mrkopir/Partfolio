@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import EnterProgressMotion from "./../enter.text.motion/enter.progress.motion"
+import EnterProgressMotion from "../enter.text.motion/enter.progress.motion"
 
-export default function EnterBackgroundMotion ({text}) {
+export default function EnterBackgroundMotion ({text}: {text: string}) {
     const [showBackground, setShowBackground] = useState(true)
 
     useEffect(() => {

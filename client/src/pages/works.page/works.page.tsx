@@ -9,9 +9,9 @@ import { useState } from "react";
 
 export default function WorksPage () {
 
-    const [imgPath, setImgPath] = useState()
+    const [imgPath, setImgPath] = useState('')
 
-    const getAndSetImgPath = (path) => {
+    const getAndSetImgPath = (path: string) => {
         setImgPath(path)
     }
 

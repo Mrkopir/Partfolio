@@ -3,8 +3,9 @@ import { useRef } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion"
 
+
 export default function HeroSectionImage() {
-  const ref = useRef();
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]

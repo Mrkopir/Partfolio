@@ -1,4 +1,14 @@
-export const projects = [
+
+interface skills {
+  title: string;
+  category: string;
+  shortname: string;
+  link: string;
+  description: string;
+  technologies: string[];
+}
+
+export const projects: skills[] = [
   {
     title: "Landing Page",
     category: "frontend",

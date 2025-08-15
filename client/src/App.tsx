@@ -1,10 +1,10 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import MainPage from "./pages/main.page/main.page.jsx";
-import SkillsPage from "./pages/skills.page/skills.page.jsx";
-import ContactPage from "./pages/contact.page/contact.page.jsx";
-import WorksPage from "./pages/works.page/works.page.jsx";
+import MainPage from "./pages/main.page/main.page";
+import SkillsPage from "./pages/skills.page/skills.page";
+import ContactPage from "./pages/contact.page/contact.page";
+import WorksPage from "./pages/works.page/works.page";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -16,3 +16,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App

@@ -8,7 +8,7 @@ import "./main.page.css"
 export default function MainPage() {
     return (
         <div className="MainPage">
-            <MainEnterMotion />
+            <MainEnterMotion text = "Home" />
             <div className="MainPageTop">
                 <Navigation />
                 <HeroSection />

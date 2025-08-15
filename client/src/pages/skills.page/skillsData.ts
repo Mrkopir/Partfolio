@@ -1,4 +1,14 @@
-const skillsData = {
+
+
+interface skills {
+  title: string;
+  short: string;
+  long: string;
+  tools: string[];
+  level: string;
+}
+
+const skillsData: Record<string, skills> = {
   frontend: {
     title: "Frontend",
     short: "Building intuitive interfaces.",

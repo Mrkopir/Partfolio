@@ -2,7 +2,7 @@ import { useState } from "react";
 import skillsData from "./skillsData";
 import { motion } from "framer-motion";
 
-export default function SkillsPageList({ activeSkill }) {
+export default function SkillsPageList({ activeSkill }: {activeSkill: unknown}) {
     const [skills] = useState(Object.values(skillsData));
     const [activeSkillId, setActiveSkillId] = useState("frontend");
 
@@ -18,7 +18,9 @@ export default function SkillsPageList({ activeSkill }) {
                     key={index}
                     onClick={() => {
                         setActiveSkillId(id);
-                        activeSkill(id);
+                        if (typeof activeSkill === "function"){
+                            activeSkill(id);
+                        }
                     }}
                     initial={{ scale: 1 }}
                     animate={{ scale: isActive ? 1.03 : 1 }}
