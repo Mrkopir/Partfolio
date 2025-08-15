@@ -1,91 +1,112 @@
-import { useEffect, useState } from "react"
-import { projects } from "./info"
-import { motion, AnimatePresence } from "framer-motion"
+import { useEffect, useState } from "react";
+import { projects } from "./info";
+import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["FRONTEND", "BACKEND", "FULLSTACK"]
+const categories = ["FRONTEND", "BACKEND", "FULLSTACK"] as const;
 
-export default function WorksPageTable ({sendImgPath}: {sendImgPath: any}) {
-    const [ActiveCategoriesButton, setActiveCategoriesButton] = useState("frontend") 
-    const [projectIndex, setProjectIndex] = useState(0)
+interface WorksPageTableProps {
+  sendImgPath: (path: string) => void;
+}
 
-    const filteredProjects = projects.filter((proj) => proj.category === ActiveCategoriesButton)
+export default function WorksPageTable({ sendImgPath }: WorksPageTableProps) {
+  const [activeCategory, setActiveCategory] = useState<string>("frontend");
+  const [projectIndex, setProjectIndex] = useState<number>(0);
 
-    useEffect(() => {
-        setProjectIndex(0)
-    }, [ActiveCategoriesButton])
+  const filteredProjects = projects.filter(
+    (proj) => proj.category.toLowerCase() === activeCategory
+  );
 
-    useEffect(() => {
-        const currentProject = filteredProjects[projectIndex]
-        if (currentProject) {
-            sendImgPath(currentProject.shortname)
-        }
-    }, [projectIndex, filteredProjects, sendImgPath])
+  // Скидаємо індекс при зміні категорії
+  useEffect(() => {
+    setProjectIndex(0);
+  }, [activeCategory]);
 
-    const onCategoriesClick = (event: React.MouseEvent<HTMLDivElement>) => {
-        const e = event?.target as HTMLElement
-        setActiveCategoriesButton((e?.textContent).toLowerCase())
+  // Викликаємо sendImgPath коли змінюється проект
+  useEffect(() => {
+    const currentProject = filteredProjects[projectIndex];
+    if (currentProject) {
+      sendImgPath(currentProject.shortname);
     }
+  }, [projectIndex, filteredProjects, sendImgPath]);
 
-    const onProjClickNext = () => {
-        const newIndex = projectIndex < filteredProjects.length - 1 ? projectIndex + 1 : 0;
-        setProjectIndex(newIndex);
-        const currentProject = filteredProjects[projectIndex];
-        sendImgPath(currentProject.shortname);
-    };
+  const handleCategoryClick = (category: string) => {
+    setActiveCategory(category.toLowerCase());
+  };
 
-    const onProjClickPrev = () => {
-        const newIndex = projectIndex > 0 ? projectIndex - 1 : filteredProjects.length - 1;
-        setProjectIndex(newIndex);
-        const currentProject = filteredProjects[newIndex];
-        sendImgPath(currentProject.shortname);
-    };
+  const handleNextProject = () => {
+    setProjectIndex((prev) =>
+      prev < filteredProjects.length - 1 ? prev + 1 : 0
+    );
+  };
 
-    const project = filteredProjects[projectIndex]
+  const handlePrevProject = () => {
+    setProjectIndex((prev) =>
+      prev > 0 ? prev - 1 : filteredProjects.length - 1
+    );
+  };
 
-    return(
-        <div className="WorksPageTable">
-            <div className="WorksPageTableCategories">
-                {categories.map((category) => {
-                    return (
-                        <div key={category} onClick={onCategoriesClick} className={ActiveCategoriesButton === category.toLocaleLowerCase() ? 'active-category' : ""}  >
-                            <h3 
-                            >{category.toLocaleUpperCase()}
-                            </h3>
-                        </div>
-                    )
-                })}
+  const currentProject = filteredProjects[projectIndex];
+
+  return (
+    <div className="WorksPageTable">
+      <div className="WorksPageTableCategories">
+        {categories.map((category) => (
+          <div
+            key={category}
+            onClick={() => handleCategoryClick(category)}
+            className={
+              activeCategory === category.toLowerCase() ? "active-category" : ""
+            }
+          >
+            <h3>{category}</h3>
+          </div>
+        ))}
+      </div>
+
+      <AnimatePresence mode="wait">
+        {currentProject && (
+          <div key={projectIndex} className="WorkPageInfo">
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              exit={{ x: "70%", opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1>{currentProject.title}</h1>
+            </motion.div>
+
+            <motion.div
+              style={{ textAlign: "center" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <p className="WorkPageInfoDescription">
+                {currentProject.description}
+              </p>
+              <h3 className="WorkPageInfoTechnologies">
+                {currentProject.technologies.join(" | ")}
+              </h3>
+              <div>
+                <a
+                  className="WorkPageInfoLink"
+                  href={currentProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {currentProject.link}
+                </a>
+              </div>
+            </motion.div>
+
+            <div className="WorkPageInfoButtons">
+              <button onClick={handlePrevProject}>Prev</button>
+              <button onClick={handleNextProject}>Next</button>
             </div>
-            <AnimatePresence mode="wait">
-            {project && (
-                <div key={projectIndex} className="WorkPageInfo" >
-                    <motion.div
-                        initial = {{x: "-100%", opacity: 0}}
-                        animate = {{x: "0%", opacity: 1}}
-                        exit = {{x: "70%", opacity: 0}}
-                        transition={{duration: 1}}
-                    >
-                        <h1>{project.title}</h1>
-                    </motion.div>
-                    <motion.div
-                        style = {{textAlign: "center"}}
-                        initial = {{opacity: 0}}
-                        animate = {{opacity: 1}}
-                        exit = {{opacity: 0}}
-                        transition={{duration: 1}}
-                    >
-                        <p className="WorkPageInfoDescription">{project.description}</p>
-                        <h3 className="WorkPageInfoTechnologies">{project.technologies.join(" | ")}</h3>
-                        <div>
-                            <a className="WorkPageInfoLink" href={project.link}><p>{project.link}</p></a>
-                        </div>
-                    </motion.div>
-                    <div className="WorkPageInfoButtons">
-                        <button onClick={onProjClickPrev}>Prevent</button>
-                        <button onClick={onProjClickNext}>Next</button>
-                    </div>
-                </div>
-            )}
-            </AnimatePresence>
-        </div>
-    )
+          </div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 }
