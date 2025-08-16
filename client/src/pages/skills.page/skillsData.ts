@@ -13,15 +13,15 @@ const skillsData: Record<string, skills> = {
     title: "Frontend",
     short: "Building intuitive interfaces.",
     long: "I create modern, responsive, and user-friendly interfaces using React, Tailwind CSS, and Framer Motion. I focus on accessibility, performance, and clean component architecture.",
-    tools: ["React", "Framer Motion", "CSS Modules"],
-    level: "Advanced"
+    tools: ["React", "Framer Motion", "CSS Modules", "TS", "Next.js"],
+    level: "Junior"
   },
   backend: {
     title: "Backend",
     short: "Designing robust server logic.",
     long: "I build secure and scalable server-side applications using Node.js and Express. I structure APIs clearly, handle authentication with JWT, and connect apps to MongoDB for dynamic data.",
-    tools: ["Node.js", "Express", "MongoDB", "JWT", "Bcrypt"],
-    level: "Advanced"
+    tools: ["Node.js", "Express", "MongoDB", "JWT", "Bcrypt", "TS"],
+    level: "Junior"
   },
   deployment: {
     title: "Deployment",
@@ -35,7 +35,7 @@ const skillsData: Record<string, skills> = {
     short: "Communication, focus, and learning.",
     long: "I stay curious and adaptable. I keep improving how I work, communicate clearly in teams or solo, and stay focused when solving complex problems.",
     tools: ["Problem-solving", "Discipline", "Curiosity", "Clear thinking"],
-    level: "High"
+    level: ""
   }
 };
 
